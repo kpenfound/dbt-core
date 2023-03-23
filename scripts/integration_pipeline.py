@@ -25,7 +25,7 @@ async def test():
       .with_mounted_directory("/usr/app", src)
       .with_workdir("/usr/app")
       .with_exec(["apt-get", "update"])
-      .with_exec(["apt-get", "install", "-y", "postgresql", "libpq-dev"])
+      .with_exec(["apt-get", "install", "-y", "postgresql", "libpq-dev", "git"])
       .with_exec(["python", "-m", "pip", "install", "tox"])
       .with_env_variable("NO_DAGGER_CACHE", str(datetime.now()))
     )
