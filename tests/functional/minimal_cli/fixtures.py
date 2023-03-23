@@ -1,4 +1,5 @@
 import pytest
+import os
 
 models__schema_yml = """
 version: 2
@@ -70,7 +71,7 @@ class BaseConfigProject:
                         "type": "postgres",
                         "dbname": "dbt",
                         "schema": "jaffle_shop",
-                        "host": "localhost",
+                        "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
                         "user": "root",
                         "port": 5432,
                         "pass": "password",

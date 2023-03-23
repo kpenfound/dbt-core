@@ -1,4 +1,5 @@
 import pytest
+import os
 from dbt.tests.util import run_dbt, get_manifest
 
 
@@ -22,7 +23,7 @@ def dbt_profile_data(unique_schema):
                 "default": {
                     "type": "postgres",
                     "threads": 4,
-                    "host": "localhost",
+                    "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
                     "port": 5432,
                     "user": "root",
                     "pass": "password",

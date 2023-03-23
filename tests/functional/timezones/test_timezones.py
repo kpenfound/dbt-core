@@ -31,7 +31,7 @@ class TestTimezones:
                     "dev": {
                         "type": "postgres",
                         "threads": 1,
-                        "host": "localhost",
+                        "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
                         "port": int(os.getenv("POSTGRES_TEST_PORT", 5432)),
                         "user": os.getenv("POSTGRES_TEST_USER", "root"),
                         "pass": os.getenv("POSTGRES_TEST_PASS", "password"),

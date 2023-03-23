@@ -408,7 +408,7 @@ class TestInitOutsideOfProject(TestInitOutsideOfProjectBase):
                     "default2": {
                         "type": "postgres",
                         "threads": 4,
-                        "host": "localhost",
+                        "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
                         "port": int(os.getenv("POSTGRES_TEST_PORT", 5432)),
                         "user": os.getenv("POSTGRES_TEST_USER", "root"),
                         "pass": os.getenv("POSTGRES_TEST_PASS", "password"),
@@ -418,7 +418,7 @@ class TestInitOutsideOfProject(TestInitOutsideOfProjectBase):
                     "noaccess": {
                         "type": "postgres",
                         "threads": 4,
-                        "host": "localhost",
+                        "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
                         "port": int(os.getenv("POSTGRES_TEST_PORT", 5432)),
                         "user": "noaccess",
                         "pass": "password",
