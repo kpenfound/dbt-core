@@ -74,7 +74,7 @@ class TestEnvVars:
                     "dev": {
                         "type": "postgres",
                         "threads": 1,
-                        "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
+                        "host": "localhost",
                         "port": 5432,
                         "user": "root",
                         "pass": "password",
@@ -84,7 +84,7 @@ class TestEnvVars:
                     "prod": {
                         "type": "postgres",
                         "threads": 1,
-                        "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
+                        "host": "localhost",
                         "port": 5432,
                         # root/password
                         "user": "{{ env_var('DBT_TEST_USER') }}",

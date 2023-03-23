@@ -17,7 +17,7 @@ class TestDisabledConfigs(BaseConfigProject):
                         "type": "postgres",
                         # make sure you can do this and get an int out
                         "threads": "{{ (1 + 3) | as_number }}",
-                        "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
+                        "host": "localhost",
                         "port": "{{ (5400 + 32) | as_number }}",
                         "user": "root",
                         "pass": "password",
@@ -28,7 +28,7 @@ class TestDisabledConfigs(BaseConfigProject):
                         "type": "postgres",
                         # make sure you can do this and get an int out
                         "threads": "{{ (1 + 3) | as_number }}",
-                        "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
+                        "host": "localhost",
                         "port": "{{ (5400 + 32) | as_number }}",
                         "user": "root",
                         "pass": "password",

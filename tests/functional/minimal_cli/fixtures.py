@@ -71,7 +71,7 @@ class BaseConfigProject:
                         "type": "postgres",
                         "dbname": "dbt",
                         "schema": "jaffle_shop",
-                        "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
+                        "host": "localhost",
                         "user": "root",
                         "port": 5432,
                         "pass": "password",

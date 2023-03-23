@@ -98,7 +98,7 @@ class DocumentationParserTest(unittest.TestCase):
             "outputs": {
                 "test": {
                     "type": "postgres",
-                    "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
+                    "host": "localhost",
                     "schema": "analytics",
                     "user": "test",
                     "pass": "test",

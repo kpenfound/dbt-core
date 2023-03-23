@@ -310,7 +310,7 @@ class TestProfileEnvVars:
         return {
             "type": "postgres",
             "threads": 4,
-            "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
+            "host": "localhost",
             "port": 5432,
             "user": "{{ env_var('ENV_VAR_USER') }}",
             "pass": "{{ env_var('ENV_VAR_PASS') }}",
@@ -362,7 +362,7 @@ class TestProfileSecretEnvVars:
         return {
             "type": "postgres",
             "threads": 4,
-            "host": os.getenv("POSTGRES_TEST_HOST", "localhost"),
+            "host": "localhost",
             "port": 5432,
             "user": "{{ env_var('DBT_ENV_SECRET_USER') }}",
             "pass": "{{ env_var('ENV_VAR_PASS') }}",
